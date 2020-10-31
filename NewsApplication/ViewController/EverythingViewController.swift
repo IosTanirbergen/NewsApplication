@@ -22,7 +22,12 @@ class EverythingViewController: UIViewController {
         navBar?.isHidden = false
         navBar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navBar?.topItem?.title = "Everything"
+        navBar?.topItem?.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "check-mark").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(HandleSave))
     }
 
 
+    
+    @objc fileprivate func HandleSave(){
+        
+    }
 }

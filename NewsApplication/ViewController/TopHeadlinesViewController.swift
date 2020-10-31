@@ -14,6 +14,10 @@ class TopHeadlinesViewController: UIViewController {
         super.viewDidLoad()
         SetupNavigationController()
         view.backgroundColor = .white
+        
+        let service = Service()
+        
+        service.callingTopHeadlinesNewsAPI()
     }
     
     private func SetupNavigationController(){
