@@ -13,11 +13,7 @@ class NewsView: UIView {
         didSet {
             setNeedsLayout()
         }
-    }
-    
-    
-    
-    
+    }    
     override func layoutSubviews() {
         super.layoutSubviews()
         
