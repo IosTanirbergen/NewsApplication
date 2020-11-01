@@ -9,6 +9,7 @@
 import UIKit
 
 class TopHeadlinesViewController: UIViewController {
+    
     let topHeadlinesCellId = "BandCellID"
     
     
@@ -42,26 +43,19 @@ class TopHeadlinesViewController: UIViewController {
         super.viewDidLoad()
         SetupNavigationController()
         view.backgroundColor = .white
-     //   mainVM.topVc = self
-        mainVM.callingTopHeadlinesNewsAPI {
+        mainVM.getTopHeadlinesNewsAPI{
             data in
             self.news = data
             DispatchQueue.main.async {
-             //   self.page = arrNews.count
                 self.topHeadlinesTableView.reloadData()
-                
             }
-            
         }
         
         topHeadlinesTableView.refreshControl = UIRefreshControl()
         topHeadlinesTableView.refreshControl?.addTarget(self, action: #selector(UpdateData), for: .valueChanged)
-        //view.addSubview(refreshcontrol)
-       // refreshcontrol.addTarget(self, action: #selector(refreshData), for: .valueChanged)
-    
-        
         setupTableView()
     }
+    
     @objc  private func UpdateData(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.topHeadlinesTableView.refreshControl?.endRefreshing()
@@ -79,7 +73,6 @@ class TopHeadlinesViewController: UIViewController {
     
     fileprivate func setupTableView() {
         
-          
           topHeadlinesTableView.dataSource = self
           topHeadlinesTableView.delegate = self
           topHeadlinesTableView.backgroundColor = .white
@@ -90,12 +83,10 @@ class TopHeadlinesViewController: UIViewController {
         
       }
     
-    
-    
-    
-    @objc fileprivate func HandleSave(){
-     print("1")
-    }
+      @objc fileprivate func HandleSave(){
+       let vc = SaveNewsViewController()
+       present(vc,animated: true)
+      }
 
 }
 

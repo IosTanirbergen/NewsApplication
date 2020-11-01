@@ -1,15 +1,15 @@
 //
-//  TopHeadlinesCell.swift
+//  EverythingCell.swift
 //  NewsApplication
 //
-//  Created by Devnull on 11/1/20.
+//  Created by Devnull on 11/2/20.
 //  Copyright © 2020 Tanirbergen Kaldibai. All rights reserved.
 //
 
 import UIKit
 
-class TopHeadlinesCell: UITableViewCell {
-    
+class EverythingCell: UITableViewCell {
+   
     let titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -30,5 +30,5 @@ class TopHeadlinesCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("error")
     }
-    
 }
+

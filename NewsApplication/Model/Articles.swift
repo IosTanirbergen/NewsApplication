@@ -12,7 +12,6 @@ struct Articles : Codable {
 	let content : String?
 
 	enum CodingKeys: String, CodingKey {
-
 		case source = "source"
 		case author = "author"
 		case title = "title"

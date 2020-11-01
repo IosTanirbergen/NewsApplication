@@ -9,4 +9,5 @@
 import Foundation
 
 
-let TopHeadlinesAPI = "https://newsapi.org/v2/everything?q=apple&apiKey=e65ee0938a2a43ebb15923b48faed18d"
+let TopHeadlinesAPI = "https://newsapi.org/v2/everything?q=apple&apiKey=261ad03d5fb74b308c312eb98f9c58c1"
+let EverytingApi = "https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=261ad03d5fb74b308c312eb98f9c58c1"

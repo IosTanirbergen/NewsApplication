@@ -16,9 +16,6 @@ class NewsView: UIView {
     }    
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        
-        
         switch newsData {
         case .initial:
             break
