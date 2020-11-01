@@ -8,5 +8,4 @@ target 'NewsApplication' do
   # Pods for NewsApplication
 
   pod 'Alamofire', '~> 5.2'
-
 end

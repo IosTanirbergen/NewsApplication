@@ -9,9 +9,12 @@
 import UIKit
 
 class TopHeadlinesCell: UITableViewCell {
+    var news : [News] = []
     
     let titleLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 14.0)
         return label
     }()
     

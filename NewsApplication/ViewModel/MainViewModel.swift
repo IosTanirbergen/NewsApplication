@@ -6,19 +6,20 @@
 //  Copyright © 2020 Tanirbergen Kaldibai. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Alamofire
 
 protocol MainViewModelProtocol {
     var updateViewData: ((ViewData)->())? {get set}
-    func callingTopHeadlinesNewsAPI()
 }
 
+
+
+
 final class MainViewModel: MainViewModelProtocol {
-   static let shareInstance = Service()
-   weak var topVc : TopHeadlinesViewController?
-    
-    func callingTopHeadlinesNewsAPI(){
+    weak var topVc : TopHeadlinesViewController?
+    var arrNews = [News]()
+    func callingTopHeadlinesNewsAPI(comp :@escaping([Articles])->()){
            
            AF.request(TopHeadlinesAPI,method: .get,parameters: nil).response{
                response in
@@ -26,11 +27,13 @@ final class MainViewModel: MainViewModelProtocol {
                switch response.result {
                 case .success(let data):
                    do {
-                       let news = try JSONDecoder().decode(News.self, from: data!)
-   //                    DispatchQueue.main.async {
-   //                        onCompletion(news)
-   //                    }
-                     //  print(news)
+                       let result = try JSONDecoder().decode(News.self, from: data!)
+                   
+                    comp(result.articles!)
+
+                    DispatchQueue.main.async {
+                        self.topVc?.topHeadlinesTableView.reloadData()
+                    }
                    } catch {
                        print("error")
                    }
