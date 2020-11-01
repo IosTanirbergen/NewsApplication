@@ -11,7 +11,11 @@ import UIKit
 class TopHeadlinesViewController: UIViewController {
     let topHeadlinesCellId = "BandCellID"
     
-    var countNews:[String] = Array()
+    
+    let udid = UIDevice.current.identifierForVendor?.uuidString
+   
+    
+    var countNews:[Int] = Array()
     var pageIndex = 1
      public let topHeadlinesTableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .grouped)
@@ -43,7 +47,7 @@ class TopHeadlinesViewController: UIViewController {
             data in
             self.news = data
             DispatchQueue.main.async {
-                self.page = self.news.count
+             //   self.page = arrNews.count
                 self.topHeadlinesTableView.reloadData()
                 
             }
@@ -75,6 +79,7 @@ class TopHeadlinesViewController: UIViewController {
     
     fileprivate func setupTableView() {
         
+          
           topHeadlinesTableView.dataSource = self
           topHeadlinesTableView.delegate = self
           topHeadlinesTableView.backgroundColor = .white

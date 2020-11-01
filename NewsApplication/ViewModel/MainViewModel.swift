@@ -13,22 +13,22 @@ protocol MainViewModelProtocol {
     var updateViewData: ((ViewData)->())? {get set}
 }
 
-
-
-
 final class MainViewModel: MainViewModelProtocol {
+  
     weak var topVc : TopHeadlinesViewController?
-    var arrNews = [News]()
+    var arrNews = [Articles]()
+    
     func callingTopHeadlinesNewsAPI(comp :@escaping([Articles])->()){
            
            AF.request(TopHeadlinesAPI,method: .get,parameters: nil).response{
                response in
                
+            
                switch response.result {
                 case .success(let data):
                    do {
                        let result = try JSONDecoder().decode(News.self, from: data!)
-                   
+                //   print(result)
                     comp(result.articles!)
 
                     DispatchQueue.main.async {
@@ -43,6 +43,10 @@ final class MainViewModel: MainViewModelProtocol {
                    }
            }.resume()
        }
+    
+    func getNews(at indexPath: IndexPath) -> Articles {
+        return arrNews[indexPath.row]
+    }
     
     public var updateViewData: ((ViewData) -> ())?
     

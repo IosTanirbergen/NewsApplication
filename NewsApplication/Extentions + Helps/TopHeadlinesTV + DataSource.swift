@@ -39,6 +39,7 @@ extension TopHeadlinesViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         if position > (topHeadlinesTableView.contentSize.height - 100 - scrollView.frame.size.height){
@@ -50,6 +51,26 @@ extension TopHeadlinesViewController: UITableViewDelegate, UITableViewDataSource
                 }
                 
             }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = NewsDetailViewController()
+        let module = news[indexPath.row]
+        vc.authorLabel.text = module.author
+        vc.titleLabel.text = module.title
+        vc.descriptionLabel.text = module.description
+        vc.publishedAtLabel.text = module.publishedAt
+        vc.contentLabel.text = module.content
+        print(vc.authorLabel.text ?? "")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? NewsDetailViewController {
+            destination.informationNews = news[topHeadlinesTableView.indexPathForSelectedRow!.row]
         }
     }
    

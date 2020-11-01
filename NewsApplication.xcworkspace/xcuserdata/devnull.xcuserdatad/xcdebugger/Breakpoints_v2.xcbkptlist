@@ -14,8 +14,8 @@
             filePath = "NewsApplication/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57">
+            startingLineNumber = "61"
+            endingLineNumber = "61">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,6 +30,86 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
+            landmarkName = "callingTopHeadlinesNewsAPI(comp:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7AA23D66-3178-4DFE-B592-95599C0A18AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApplication/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "callingTopHeadlinesNewsAPI(comp:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43B5DFCA-27B7-4680-96B8-0AEBA1CBC583"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApplication/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "callingTopHeadlinesNewsAPI(comp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "43B5DFCA-27B7-4680-96B8-0AEBA1CBC583 - 3c6c3ab2a97e5ddb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in NewsApplication.MainViewModel.callingTopHeadlinesNewsAPI(comp: (Swift.Array&lt;NewsApplication.Articles&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NewsApplication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devnull/Desktop/Desknull/NewsApplication/NewsApplication/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1265">
+               </Location>
+               <Location
+                  uuid = "43B5DFCA-27B7-4680-96B8-0AEBA1CBC583 - 4d43322e89ac94f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in NewsApplication.MainViewModel.callingTopHeadlinesNewsAPI(comp: (Swift.Array&lt;NewsApplication.Articles&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NewsApplication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devnull/Desktop/Desknull/NewsApplication/NewsApplication/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77F5C6DB-650B-4293-898A-F4D4DFB54C17"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApplication/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "callingTopHeadlinesNewsAPI(comp:)"
             landmarkType = "7">
          </BreakpointContent>
